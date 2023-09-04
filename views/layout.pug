@@ -8,13 +8,14 @@ html(lang="en")
     //link(href="css/style.css", rel="stylesheet")
     script(src="https://cdn.tailwindcss.com") 
 
-  body(class='bg-gray-950 text-white')
-    header(class='bg-gray-900 flex items-center p-2 justify-between')
-      a(href="/")
-        img(src="https://wecode.network/assets/images/logo_we_code_t.png", alt="" class="w-32")
-      div(class='flex lg:flex w-full justify-end items-center gap-2')
-        
-        a(href="/" class=' text-gray-200 font-medium ') Home
-        a(href="/" class=' text-gray-500') Codigos
-        a(href="/" class='p-2 m-2 bg-gray-950 rounded-xl transition duration-300 text-gray-500 ease-in-out hover:bg-red-600 hover:text-gray-100 ') Talk to 
-            span(class='font-medium') Dev!
+  body(class='bg-[#283618] text-white min-h-screen flex flex-col')
+    header(class='bg-[#606c38] flex items-center p-12 justify-between shadow-xl h-16')
+      a(href="/" class='ml-7')
+        img(src="/img/logo.png", alt="" class="w-32")
+      div(class='flex lg:flex w-full justify-end items-center gap-4')
+        a(href="/" class='text-[#fefae0] font-medium text-xl transition ease-in hover:text-[#dda15e]') Home
+        a(href="/" class='text-[#fefae0] font-medium text-xl transition ease-in hover:text-[#dda15e]') Codigos
+        a(href="/" class='p-2 m-2 mr-7 bg-gray-800  text-xl rounded-xl transition duration-300 text-[#fefae0] hover:bg-[#bc6c25] hover:text-white')
+          span(class='font-medium') Talk to Dev!
+    block contenido
+
