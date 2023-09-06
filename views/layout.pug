@@ -7,15 +7,35 @@ html(lang="en")
     title=(pageName) ? pageName : 'Proyetos'
     //link(href="css/style.css", rel="stylesheet")
     script(src="https://cdn.tailwindcss.com") 
-
+    script(src="js/home.js") 
+    script(src="https://kit.fontawesome.com/1a3eab4faf.js" crossorigin="anonymous") 
   body(class='bg-[#283618] text-white min-h-screen flex flex-col')
-    header(class='bg-[#606c38] flex items-center p-12 justify-between shadow-xl h-16')
-      a(href="/" class='ml-7')
+
+    nav#navbar(class='hidden z-20 bg-[#283618] text-white w-48 h-screen absolute top-0 right-0 ')
+      ul(class='mt-8 flex flex-col gap-4 px-4')
+        li(class='w-full h-12 flex justify-center items-center bg-[#606c38] rounded-lg')
+          a(href="#") Home
+        li(class='w-full h-12 flex justify-center items-center bg-[#606c38] rounded-lg')
+          a(href="#") Codigos
+        li(class='w-full h-12 flex justify-center items-center bg-orange-800 rounded-lg transition duration-300 text-[#fefae0] hover:bg-[#bc6c25] hover:text-white')
+          a(href="#") Talk to Dev
+
+
+    div#overlay(class='absolute hidden w-screen h-screen z-10 bg-black opacity-40')
+
+    header(class='bg-[#606c38] relative flex items-center p-12 justify-between shadow-xl h-16')
+      a(href="/" class=' lg:ml-7 mx-auto  flex items-center justify-center')
         img(src="/img/logo.png", alt="" class="w-32")
-      div(class='flex lg:flex w-full justify-end items-center gap-4')
+      i#menuIcon(class='lg:hidden fas fa-bars fa-2x absolute right-9 cursor-pointer')
+
+      
+
+      
+
+      div(class='hidden lg:flex w-full justify-end items-center gap-4')
         a(href="/" class='text-[#fefae0] font-medium text-xl transition ease-in hover:text-[#dda15e]') Home
         a(href="/" class='text-[#fefae0] font-medium text-xl transition ease-in hover:text-[#dda15e]') Codigos
-        a(href="/" class='p-2 m-2 mr-7 bg-gray-800  text-xl rounded-xl transition duration-300 text-[#fefae0] hover:bg-[#bc6c25] hover:text-white')
+        a(href="/" class='p-2 m-2 mr-7 bg-orange-800  text-xl rounded-xl transition duration-300 text-[#fefae0] hover:bg-[#bc6c25] hover:text-white')
           span(class='font-medium') Talk to Dev!
     block contenido
 
