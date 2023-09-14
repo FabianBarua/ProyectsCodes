@@ -83,6 +83,7 @@
     --focus-text: 0 0 0 .2rem var(--charcoal), 0 0 0 .27rem var(--blue)
 }
 
+
 html {
     font-size: 1em;
     scroll-behavior: smooth
@@ -126,4 +127,8 @@ body {
 .contact:active {
     transform: translate(0px, 2px); 
     transition: transform 100ms ease-in; 
+}
+
+.arroba{
+    fill: #f9f4da;
 }
