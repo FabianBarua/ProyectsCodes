@@ -3,8 +3,3 @@ exports.home = (req, res) =>{
         pageName : 'Home'
         });
 }
-exports.home2 = (req, res) =>{
-        res.render('home2', {
-        pageName : 'Home'
-        });
-}

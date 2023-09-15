@@ -83,6 +83,16 @@
     --focus-text: 0 0 0 .2rem var(--charcoal), 0 0 0 .27rem var(--blue)
 }
 
+/* dibuja en cualquier texto seleccionado el color amarillo  sobre un fondo rojo */
+::-moz-selection {
+color: var(--gray-dark);
+background: var(--brand-yellow);
+}
+::selection {
+color: var(--gray-dark);
+background: var(--brand-yellow);
+}
+
 
 html {
     font-size: 1em;
@@ -117,18 +127,59 @@ body {
     transition: transform 100ms ease-in; 
 }
 
-.contact{
+.button{
     transition: ease-in;
     transition-duration: 100ms;
 }
-.contact:hover{
+.button:hover{
     transition: 100ms ease-in;
 }
-.contact:active {
+.button:active {
     transform: translate(0px, 2px); 
     transition: transform 100ms ease-in; 
 }
 
-.arroba{
-    fill: #f9f4da;
+.arroba {
+   background-image: url('/img/SVG/arroba.svg');
+   background-size: cover;
+}
+.bar {
+    background-image: url('/img/SVG/bar.svg');
+    background-size: cover;
+ }
+
+.codigos{
+    border-color: rgba(15, 13, 14, 0.5);
+}
+.codigos:hover{
+    background-color: rgba(var(--brand-beige), 0.1); 
+    transition: 100ms ease-in;
+
+}
+
+.github{
+    border-color: rgba(15, 13, 14, 0.5);
+}
+.github:hover{
+    background-color: rgb(138, 61, 255); 
+    transition: 100ms ease-in;
+
+}
+
+.hide {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0s linear 0.3s;
+}
+  
+#submenu {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0s linear 0.3s;
+}
+  
+#submenu.active {
+opacity: 1;
+visibility: visible;
+transition: opacity 0.3s ease-in-out, visibility 0s linear;
 }

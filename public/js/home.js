@@ -1,25 +1,21 @@
-
 document.addEventListener("DOMContentLoaded", function () {
-    const menuIcon = document.getElementById("menuIcon");
-    const navbar = document.getElementById("navbar");
-    const overlay = document.getElementById('overlay');
-    menuIcon.addEventListener("click", function () {
-        toggleNav()
-    });
+    const barButton = document.getElementById("bar");
+    const submenu = document.getElementById("submenu");
 
-    overlay.addEventListener("click", function () {
-        toggleNav()
-    });
 
-    
+    if (barButton && submenu) {
+        barButton.addEventListener("click", function (event) {
+            toggleNav(submenu);
+        });
+
+        document.addEventListener("click", function (event) {
+            if (!submenu.contains(event.target)) {
+                submenu.classList.remove("active"); 
+            }
+        });
+    }
 });
 
-document.addEventListener("keydown", function(event) {
-    navbar.classList.add("hidden");
-    overlay.classList.add("hidden");
-});
-
-function toggleNav(){
-    navbar.classList.toggle("hidden");
-    overlay.classList.toggle("hidden");
+function toggleNav(submenu){
+    submenu.classList.toggle("active");
 }
