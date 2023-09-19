@@ -2,5 +2,25 @@ extends layout
 
 block contenido
     header(class="mx-auto max-w-[80ch] w-full my-10 px-8")
-        h1.font-bold.text-3xl.uppercase.font-display.text-brand-beige Hola
-    h1(class="max-w-screen-xl w-full mx-auto px-8 mb-8") hola
+        h1.font-bold.text-3xl.uppercase.text-center.font1 My best projects
+    section(class="max-w-[50ch] mx-auto")
+        ul(class="w-full pt-16 flex  justify-center")
+            li(class=" w-[16rem]  bg-[#231f20] p-[0.35rem]")
+                div(class="bg-[#0F0D0E] w-full h-[14.2rem] flex flex-col   items-center ")
+                    img(src="https://react.gg/img/tier-starter.svg", alt="alt", class=" w-28 mt-[-30%]  mb-2")
+                    p.font1 UpTasks
+                    p(class="desc text-sm px-7 text-center") Colabora con tu equipo de manera eficiente, compartiendo listas de proyectos y actualizaciones en tiempo real. 
+                    button(class="button bg-[#231F20] mt-6 button-large text-sm rounded-full border shadow-static border-[var(--white)] ") VER PROYECTO
+            li(class=" w-[16rem]  bg-[var(--white)] p-[0.35rem] mt-[-5%]")
+                div(class="bg-[var(--green)] w-full h-[14.2rem] flex flex-col   items-center ")
+                    img(src="https://react.gg/img/tier-annual.svg", alt="alt", class=" h-28 mt-[-30%]  mb-2")
+                    p.font1 Asana Clone
+                    p(class="desc text-sm px-7 text-center") Colabora con tu equipo de manera eficiente, compartiendo listas de proyectos y actualizaciones en tiempo real. 
+                    button(class="button bg-[var(--yellow)] mt-6 button-large text-sm rounded-full border  border-[var(--coal)] shadow-static text-[var(--coal)]") VER PROYECTO
+
+            li(class=" w-[16rem]  bg-[#231f20] p-[0.35rem]")
+                div(class="bg-[#0F0D0E] w-full h-[14.2rem] flex flex-col   items-center ")
+                    img(src="https://react.gg/img/tier-complete.svg", alt="alt", class=" w-28 mt-[-30%]  mb-2")
+                    p.font1 CVS Manager
+                    p(class="desc text-sm px-7 text-center") Colabora con tu equipo de manera eficiente, compartiendo listas de proyectos y actualizaciones en tiempo real. 
+                    button(class="button bg-[#231F20] mt-6 button-large text-sm rounded-full border shadow-static border-[var(--white)] ") VER PROYECTO

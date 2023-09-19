@@ -59,7 +59,7 @@
     --gentlePeachLol: #f99157;
     --magesticPurple: #9d7dce;
     --red: var(--brand-red);
-    --white: var(--brand-beige);
+    --white: rgb(var(--brand-beige));
     --purple: var(--brand-purple);
     --black: var(--brand-coal);
     --blue: var(--brand-blue);
@@ -184,3 +184,34 @@ opacity: 1;
 visibility: visible;
 transition: opacity 0.3s ease-in-out, visibility 0s linear;
 }
+.font1{
+    font-family: Paytone One,sans-serif;
+}
+.button-large {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-family: Outfit;
+    font-style: normal;
+    font-weight: 700;
+    outline: 3px solid transparent; /* Establece el outline inicialmente transparente */
+    transition: outline 0.2s ease-in; /* Agrega una transición para el outline */
+  }
+  
+  .button-large:hover {
+    outline: 3px solid rgb(145, 197, 255); /* Cambia el color del outline al hacer hover */
+    transition: outline 0.2s ease-in; /* Agrega una transición para el outline */
+  }
+  
+  .desc{
+
+    width: 100%;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+  .shadow-static {
+    box-shadow: 2px 2px 0 0 var(--coal);
+  }
