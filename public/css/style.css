@@ -99,6 +99,8 @@ html {
     scroll-behavior: smooth
 }
 
+
+
 body {
     padding: var(--body-padding);
     background-color: var(--coal);
@@ -108,7 +110,10 @@ body {
     -webkit-font-smoothing: antialiased;
     color: rgb(var(--brand-beige));
 }
-
+#me{
+    background-color: var(--coal);
+    background-image: repeating-linear-gradient(to right,var(--charcoal),var(--charcoal) 1px,transparent 1px,transparent 30px),repeating-linear-gradient(to bottom,var(--charcoal),var(--charcoal) 1px,transparent 1px,transparent 30px);
+}
 .logo{
     height: 48px;
     width: 48px;
@@ -123,7 +128,13 @@ body {
     background-color: rgba(var(--brand-beige), 0.1); /* 0.9 para un 10% de opacidad */
     transition: 100ms ease-in;
 }
-.logo:active {
+
+
+.translate{
+    transition: ease-in;
+    transition-duration: 100ms;
+}
+.translate:active {
     transform: translate(0px, 2px); 
     transition: transform 100ms ease-in; 
 }
@@ -135,10 +146,7 @@ body {
 .button:hover{
     transition: 100ms ease-in;
 }
-.button:active {
-    transform: translate(0px, 2px); 
-    transition: transform 100ms ease-in; 
-}
+
 
 .arroba {
    background-image: url('/img/SVG/arroba.svg');
@@ -195,11 +203,15 @@ transition: opacity 0.3s ease-in-out, visibility 0s linear;
     font-family: Outfit;
     font-style: normal;
     font-weight: 700;
+
+  }
+  
+  .hoveroutline{
     outline: 3px solid transparent; /* Establece el outline inicialmente transparente */
     transition: outline 0.2s ease-in; /* Agrega una transición para el outline */
   }
-  
-  .button-large:hover {
+
+  .hoveroutline:hover {
     outline: 3px solid rgb(145, 197, 255); /* Cambia el color del outline al hacer hover */
     transition: outline 0.2s ease-in; /* Agrega una transición para el outline */
   }

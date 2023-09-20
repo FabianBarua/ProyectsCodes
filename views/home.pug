@@ -1,26 +1,88 @@
 extends layout
 
 block contenido
-    header(class="mx-auto max-w-[80ch] w-full my-10 px-8")
-        h1.font-bold.text-3xl.uppercase.text-center.font1 My best projects
-    section(class="max-w-[50ch] mx-auto")
-        ul(class="w-full pt-16 flex  justify-center")
-            li(class=" w-[16rem]  bg-[#231f20] p-[0.35rem]")
-                div(class="bg-[#0F0D0E] w-full h-[14.2rem] flex flex-col   items-center ")
-                    img(src="https://react.gg/img/tier-starter.svg", alt="alt", class=" w-28 mt-[-30%]  mb-2")
-                    p.font1 UpTasks
-                    p(class="desc text-sm px-7 text-center") Colabora con tu equipo de manera eficiente, compartiendo listas de proyectos y actualizaciones en tiempo real. 
-                    button(class="button bg-[#231F20] mt-6 button-large text-sm rounded-full border shadow-static border-[var(--white)] ") VER PROYECTO
-            li(class=" w-[16rem]  bg-[var(--white)] p-[0.35rem] mt-[-5%]")
-                div(class="bg-[var(--green)] w-full h-[14.2rem] flex flex-col   items-center ")
-                    img(src="https://react.gg/img/tier-annual.svg", alt="alt", class=" h-28 mt-[-30%]  mb-2")
-                    p.font1 Asana Clone
-                    p(class="desc text-sm px-7 text-center") Colabora con tu equipo de manera eficiente, compartiendo listas de proyectos y actualizaciones en tiempo real. 
-                    button(class="button bg-[var(--yellow)] mt-6 button-large text-sm rounded-full border  border-[var(--coal)] shadow-static text-[var(--coal)]") VER PROYECTO
+    section#me(class="max-w-[65ch] flex py-12 my-9 mx-auto h-full ")
+        div(class="flex-1 ")
+            .mr-32.float-right
+                img(src="/img/perfil.png", alt="fabian", class=" w-44 ")
+                p(class="mt-5 text-base mx-auto px-3 py-1 w-min rounded-lg  bg-[#231f20]") Fabian
+        div(class="flex-1 ")
+            p(class="font1 text-3xl text-[var(--pink)]") Who I am?
+            p(class="mt-8 max-w-sm text-2xl") I develop programs in order to be the help you need in your company or business, according to your tastes and needs.
+            a(href="#")
+                img(src="/img/SVG/in.svg", alt="fabiandev" class="w-[48px] mt-4  translate") 
+    section#bestprojects(class="max-w-[65ch] rounded-xl bg-[#322e2f] py-12 mx-auto ")
+        header(class="mx-auto w-full mb-10  px-8")
+            h1.font-bold.text-3xl.uppercase.text-center.font1 My best projects
+        div(class="max-w-[50ch] mx-auto ")
+            ul(class="w-full pt-16 flex flex-col-reverse lg:flex-row items-center lg:items-start justify-center gap-12 lg:gap-0")   
+                li(class=" w-[16rem]  bg-[#231f20] p-[0.35rem]")
+                    div(class="bg-[#0F0D0E] w-full h-[14.2rem] flex flex-col   items-center ")
+                        img(src="https://react.gg/img/tier-starter.svg", alt="alt", class=" h-28 mt-[-30%]  mb-2")
+                        p.font1.text-xl UpTasks
+                        p(class="desc text-sm px-7 text-center") Colabora con tu equipo de manera eficiente, compartiendo listas de proyectos y actualizaciones en tiempo real. 
+                        button(class="button translatebg-[#231F20] mt-6 button-large hoveroutline text-sm rounded-full border shadow-static border-[var(--white)] ") SEE PROJECT
+                    div#spects(class="  px-4 py-4 text-base")
+                        p
+                            span.mr-2 -
+                            |
+                            |Node Js
+                        p
+                            span.mr-2 -
+                            |
+                            |Tailwind
+                        hr(class="my-3 border-[var(--white)] ")
+                        p.text-center 
+                            |Time taken 
+                            |
+                            span.font-bold 12:00
 
-            li(class=" w-[16rem]  bg-[#231f20] p-[0.35rem]")
-                div(class="bg-[#0F0D0E] w-full h-[14.2rem] flex flex-col   items-center ")
-                    img(src="https://react.gg/img/tier-complete.svg", alt="alt", class=" w-28 mt-[-30%]  mb-2")
-                    p.font1 CVS Manager
-                    p(class="desc text-sm px-7 text-center") Colabora con tu equipo de manera eficiente, compartiendo listas de proyectos y actualizaciones en tiempo real. 
-                    button(class="button bg-[#231F20] mt-6 button-large text-sm rounded-full border shadow-static border-[var(--white)] ") VER PROYECTO
+                li(class=" w-[16rem]  bg-[var(--white)] order-1 lg:-order-none p-[0.35rem] mt-[-3%]")
+                    div(class="bg-[var(--green)] w-full h-[14.2rem] flex flex-col   items-center ")
+                        img(src="https://react.gg/img/tier-annual.svg", alt="alt", class=" h-28 mt-[-30%]  mb-2")
+                        p.font1.text-xl Asana Clone
+                        p(class="desc text-sm px-7 text-center") Colabora con tu equipo de manera eficiente, compartiendo listas de proyectos y actualizaciones en tiempo real. 
+                        button(class="button translatebg-[var(--yellow)] mt-6 button-large hoveroutline text-sm rounded-full border  border-[var(--coal)] shadow-static text-[var(--coal)]") SEE PROJECT
+                    div#spects(class=" text-[var(--coal)] px-4 py-4 text-base")
+                        p
+                            span.mr-2 -
+                            |
+                            |Node Js
+                        p
+                            span.mr-2 -
+                            |
+                            |Pug
+                        p
+                            span.mr-2 -
+                            |
+                            |Express
+                        p
+                            span.mr-2 -
+                            |
+                            |Sequelize
+                        hr(class="my-3 border-[var(--coal)] ")
+                        p.text-center 
+                            |Time taken 
+                            |
+                            span.font-bold 12:00
+
+                li(class=" w-[16rem]  bg-[#231f20] p-[0.35rem]")
+                    div(class="bg-[#0F0D0E] w-full h-[14.2rem] flex flex-col   items-center ")
+                        img(src="https://react.gg/img/tier-complete.svg", alt="alt", class=" h-28 mt-[-30%]  mb-2")
+                        p.font1.text-xl CVS Manager
+                        p(class="desc text-sm px-7 text-center") Colabora con tu equipo de manera eficiente, compartiendo listas de proyectos y actualizaciones en tiempo real. 
+                        button(class="button translatebg-[#231F20] mt-6 button-large hoveroutline text-sm rounded-full border shadow-static border-[var(--white)] ") SEE PROJECT
+                    div#spects(class="  px-4 py-4 text-base")
+                        p
+                            span.mr-2 -
+                            |
+                            |Node Js
+                        p
+                            span.mr-2 -
+                            |
+                            |Pug
+                        hr(class="my-3 border-[var(--white)] ")
+                        p.text-center 
+                            |Time taken 
+                            |
+                            span.font-bold 12:00
