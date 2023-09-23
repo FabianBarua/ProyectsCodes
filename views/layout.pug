@@ -6,14 +6,14 @@ html(lang="en")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
     title=(pageName) ? pageName : 'Proyetos'
-    link(href="css/style.css", rel="stylesheet")
+    link(href="/css/style.css", rel="stylesheet")
     script(src="https://cdn.tailwindcss.com") 
     script(src="js/home.js") 
 
   body
     nav(class="w-full py-2 fixed top-0 right-0 z-30 bg-[#0f0d0e]")
       div.max-w-screen-xl.mx-auto.flex.items-center.justify-between.p-2.px-8
-          a(class="logo hover:bg-[var(--white)]/10 bg-[var(--white)]/5 ")
+          a(class="logo hover:bg-[var(--white)]/10 bg-[var(--white)]/5 translate " href="/")
               object(data="/img/SVG/logo.svg" type="image/svg+xml" class='w-full')
           ul(class="flex gap-4")
               li.relative
@@ -22,9 +22,9 @@ html(lang="en")
 
                   .div#submenu(class='bg-[#231f20] z-50  absolute right-0 mt-3 w-56 rounded-md shadow-lg text-[#f9f4da] overflow-hidden')
                       div
-                          a(class='codigos block px-6 text-base  py-3 font-medium border-b button translate' href='#') Codigos
+                          a(class='codigos block px-6 text-base  py-3 font-medium border-b button translate' href='/c') Codes
                       div
-                          a(class='github block px-6 text-base  py-3 font-medium border-b button translate text-center ' href='#') GitHub 
+                          a(class='github block px-6 text-base  py-3 font-medium border-b button translate text-center ' href='https://github.com/FabianBarua') GitHub 
               li
                   a(href="#" class="button translate flex gap-2 justify-center items-center h-10 text-sm font-medium px-4 py-1 bg-[#f9f4da]/5 hover:bg-[#f9f4da]/10 text-[#f9f4da] rounded-md hover-element")
                       | Contact the Dev!

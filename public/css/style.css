@@ -57,7 +57,7 @@
     --brand-red: #ed203d;
     --brand-white: #ffffff;
     --gentlePeachLol: #f99157;
-    --magesticPurple: #9d7dce;
+    --magesticPurple: rgb(157, 125, 206);
     --red: var(--brand-red);
     --white: rgb(var(--brand-beige));
     --purple: var(--brand-purple);
@@ -195,17 +195,22 @@ transition: opacity 0.3s ease-in-out, visibility 0s linear;
 .font1{
     font-family: Paytone One,sans-serif;
 }
-.button-large {
+.font2{
+    font-family: Outfit;
+    font-weight: 400;
+}
+.button-large  {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
+  }
+  .font4{
     font-family: Outfit;
     font-style: normal;
     font-weight: 700;
-
   }
-  
+
   .hoveroutline{
     outline: 3px solid transparent; /* Establece el outline inicialmente transparente */
     transition: outline 0.2s ease-in; /* Agrega una transición para el outline */
@@ -227,3 +232,15 @@ transition: opacity 0.3s ease-in-out, visibility 0s linear;
   .shadow-static {
     box-shadow: 2px 2px 0 0 var(--coal);
   }
+
+#res{
+border-color: rgba(138, 61, 255, 0.35);
+border-top-width: 1px;
+}
+
+#res li{
+border-color: rgba(138, 61, 255, 0.35);
+border-bottom-width: 1px;
+padding-top: 1rem;
+padding-bottom: 1rem;
+}
