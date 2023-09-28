@@ -248,3 +248,21 @@ border-bottom-width: 1px;
 padding-top: 1rem;
 padding-bottom: 1rem;
 }
+
+#description{
+    color: rgba(var(--brand-beige), 0.5);
+}
+
+#container-codigo{
+background-color:rgba(var(--brand-beige), 0.1);
+overflow: hidden;
+}
+#head-code{
+    background-color:rgba(var(--brand-beige), 0.1);
+}
+#head-code button{
+    background-color:rgba(var(--brand-beige), 0.1);
+    padding: 0.2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}

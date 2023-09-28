@@ -9,8 +9,28 @@ exports.codigos = (req, res) =>{
         });
 }
 
-exports.code = (req, res) =>{
+exports.code = (req, res) => {
         res.render('code', {
-        pageName : 'Watch'
-});
-}
+            pageName: 'Watch',
+            code: `def suma(a, b):
+                """
+                Calcula la suma de dos números.
+        
+                Args:
+                a (int): El primer número.
+                b (int): El segundo número.
+        
+                Returns:
+                int: La suma de los dos números.
+                """
+                resultado = a + b
+                return resultado
+        
+num1 = 5
+num2 = 3
+resultado_suma = suma(num1, num2)
+print(resultado_suma)
+    `
+        });
+    }
+    
