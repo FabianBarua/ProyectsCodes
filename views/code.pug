@@ -2,12 +2,12 @@ extends layout
 
 block contenido
     div(class="max-w-[50ch] mx-auto mt-1")
-        p#tittle(class="text-center text-3xl w-full font1 overflow-hidden whitespace-nowrap overflow-ellipsis") TITULO
-        p#description(class="w-11/12 mx-auto mt-2 text-center text-lg") Codigo para mostrar y ocultar pantallas y ocultar pantallas y ocultar pantallas y ocultar pantallas y ocultar pantallas y ocultar pantallas 
+        p#tittle(class="text-center text-3xl w-full font1 overflow-hidden whitespace-nowrap overflow-ellipsis") #{code.name}
+        p#description(class="w-11/12 mx-auto mt-2 text-center text-lg") #{code.desc}
         div#container-codigo(class="flex mt-3 flex-col w-full rounded-lg ")
             div#head-code(class="flex justify-between p-4")
-                p.text-base.pl-2 Python
+                p.text-base.pl-2 #{code.language}
                 button(class="text-base rounded-md translate hover hoveroutline") Copiar
-            pre#code(class="mt-2 text-base font2 px-3 lg:px-8 py-6 rounded-lg w-full overflow-auto")
+            pre#code(class=" text-base font2 px-3 lg:px-8 py-6 rounded-lg w-full overflow-auto")
                 code
-                | #{code}
+                | #{code.code}

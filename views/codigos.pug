@@ -8,17 +8,17 @@ block contenido
             button(class="w-16  min-w-[4rem] sm:ml-4 flex items-center justify-center translate")
                 img(src="/img/SVG/lupa.svg", alt="" class=" h-8")
     ul#res(class="max-w-[50ch] mx-auto flex-col mt-5")
-        li(class="flex items-center")
-            div(class="flex flex-col flex-1 gap-5")
-                a(href="c/1" class="font1 text-[var(--pink)] text-xl overflow-hidden whitespace-nowrap overflow-ellipsis")
-                    | Fibonacci
-                div#tech(class="flex gap-3")
-                    div(class="bg-[#f9f4da]/5 flex gap-2 px-2 rounded-lg items-center")
-                        img(src="/img/SVG/IN.svg", alt="", class="w-[25px]")
-                        p(class="text-[#f9f4da]/50 text-lg") Python
-                    div(class="bg-[#f9f4da]/5 flex gap-2 px-2 rounded-lg items-center")
-                        img(src="/img/SVG/IN.svg", alt="", class="w-[25px]")
-                        p(class="text-[#f9f4da]/50 text-lg") Python
-            div(class="w-8 h-8 button translate  ")
-                a(href="#")
-                    img(src="/img/SVG/share.svg", alt="", class="w-[35px]") 
+        each item in codes
+            li(class="flex items-center")
+                div(class="flex flex-col flex-1 gap-5")
+                    a(href=`c/${item.id}` class="font1 text-[var(--pink)] text-xl overflow-hidden whitespace-nowrap overflow-ellipsis")
+                        | #{item.name}
+                    if item.language
+                        div#tech(class="flex gap-3")
+                            each language in item.language.split("-")
+                                div(class="bg-[#f9f4da]/5 flex gap-2 px-2 rounded-lg items-center")
+                                    img(src=`/img/SVG/${language.toLowerCase()}.svg`, alt="", class="w-[25px]")
+                                    p(class="text-[#f9f4da]/50 text-lg") #{language}
+                div(class="w-8 h-8 button translate  ")
+                    a(href="#")
+                        img(src="/img/SVG/share.svg", alt="", class="w-[35px]")

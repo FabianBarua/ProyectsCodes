@@ -1,36 +1,27 @@
+const { Sequelize } = require("sequelize");
+const Codes = require('../models/codes')
+
+
 exports.home = (req, res) =>{
         res.render('home', {
         pageName : 'Home'
         });
 }
-exports.codigos = (req, res) =>{
+
+exports.codes = async(req, res) =>{
+        const codes  = await Codes.findAll()
         res.render('codigos', {
-        pageName : 'Codes'
+        pageName : 'Codes',
+        codes: codes
         });
 }
 
-exports.code = (req, res) => {
+
+exports.code =  async (req, res) => {
+        const code  = await Codes.findOne({where:{id:req.params.id}})
         res.render('code', {
             pageName: 'Watch',
-            code: `def suma(a, b):
-                """
-                Calcula la suma de dos números.
-        
-                Args:
-                a (int): El primer número.
-                b (int): El segundo número.
-        
-                Returns:
-                int: La suma de los dos números.
-                """
-                resultado = a + b
-                return resultado
-        
-num1 = 5
-num2 = 3
-resultado_suma = suma(num1, num2)
-print(resultado_suma)
-    `
+            code:code
         });
     }
     

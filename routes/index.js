@@ -6,8 +6,8 @@ const controller = require('../controller/proyectos.js')
 module.exports = function(){
 
     router.get('/', controller.home);
-    router.get('/c', controller.codigos)
-    router.get('/c/:codigo', controller.code)
+    router.get('/c', controller.codes)
+    router.get('/c/:id', controller.code)
     return router;
 }
 

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="1000" height="1000"><rect width="1000" height="1000" rx="200" ry="200" fill="#555555"></rect><g transform="matrix(3.3377837116154874,0,0,3.3377837116154874,150.00001640900433,175.76769168054153)"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="209.72" height="194.28"><svg id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 209.72 194.28">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f9f4da;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <g id="Capa_1-2" data-name="Capa 1">
+    <g>
+      <path class="cls-1" d="m0,194.28V0h133.85v42.92H60.71v39.25h67.77v37.84H60.71v74.27H0Z"></path>
+      <g>
+        <path class="cls-1" d="m163.26,47.81c-.14-11.93,10.34-21.65,23.23-21.65,12.2,0,23.03,9.72,23.23,21.65-.14,12.2-11.03,21.92-23.23,21.92-12.82,0-23.37-9.72-23.23-21.92"></path>
+        <path class="cls-1" d="m154.71,167.28c4.27-14.62,9.51-35.64,9.51-56.05l-.14-11.72h45.29v11.72c-1.93,25.51-11.93,49.43-18.2,63.22l-2.69,6.55-7.93.14h-30.13l4.34-13.86h-.07Z"></path>
+      </g>
+    </g>
+  </g>
+</svg></svg></g></svg>
