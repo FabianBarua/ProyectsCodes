@@ -4,9 +4,14 @@ const routes = require('./routes')
 const bodyParser = require('body-parser');
 const db = require('./config/db');
 require('./models/codes')
+
+
 const port = 3000;
 
-db.sync()
+
+
+
+db.sync({force:true})
     .then(()=>{console.log('its ok')})
     .catch((error => {console.log('oh no!')}))
 
