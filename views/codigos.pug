@@ -15,9 +15,11 @@ block contenido
                         | #{item.name}
                     if item.language
                         div#tech(class="flex gap-3")
-                            each language in item.language.split("-")
+                            - var languages = item.language.split("-")
+                            each language, index in languages
                                 div(class="bg-[#f9f4da]/5 flex gap-2 px-2 rounded-lg items-center")
-                                    img(src=`/img/SVG/${language.toLowerCase()}.svg`, alt="", class="w-[25px]")
+                                    if images[index]
+                                        img(src=`/img/SVG/${language.toLowerCase()}.svg`, alt="", class="w-[25px]")
                                     p(class="text-[#f9f4da]/50 text-lg") #{language}
                 div(class="w-8 h-8 button translate  ")
                     a(href="#")
