@@ -3,24 +3,29 @@ extends layout
 block contenido
     header#search(class="max-w-[50ch] mx-auto flex sm:flex-row sm:gap-5 gap-2 flex-col  bg-[#322e2f] p-6 rounded-md")
         input(class="bg-[var(--gray)] hoveroutline my-auto flex-1 text-lg rounded-full pl-6 py-2 " placeholder="Search...")
+
         div(class="flex justify-between")
             button(class="button translate hoveroutline button-large   text-lg  bg-[#f9f4da]/5 hover:bg-[#f9f4da]/10 text-[#f9f4da] rounded-md hover-element font2") Filter
             button(class="w-16  min-w-[4rem] sm:ml-4 flex items-center justify-center translate")
                 img(src="/img/SVG/lupa.svg", alt="" class=" h-8")
+
+    pre.text-xs #{vardump(results)} 
+
     ul#res(class="max-w-[50ch] mx-auto flex-col mt-5")
+        
         each item in codes
             li(class="flex items-center")
                 div(class="flex flex-col flex-1 gap-5")
-                    a(href=`c/${item.id}` class="font1 text-[var(--pink)] text-xl overflow-hidden whitespace-nowrap overflow-ellipsis")
-                        | #{item.name}
+                    a(href=`c/${item.CODE_ID}` class="font1 text-[var(--pink)] text-xl overflow-hidden whitespace-nowrap overflow-ellipsis")
+                        | #{item.CODE_TITLE}
                     if item.language
                         div#tech(class="flex gap-3")
                             - var languages = item.language.split("-")
                             each language, index in languages
                                 div(class="bg-[#f9f4da]/5 flex gap-2 px-2 rounded-lg items-center")
-                                    if images[index]
-                                        img(src=`/img/SVG/${language.toLowerCase()}.svg`, alt="", class="w-[25px]")
+                                    img(src=`/img/SVG/${language.toLowerCase()}.svg`, alt="", class="w-[25px]")
                                     p(class="text-[#f9f4da]/50 text-lg") #{language}
+
                 div(class="w-8 h-8 button translate  ")
                     a(href="#")
                         img(src="/img/SVG/share.svg", alt="", class="w-[35px]")
