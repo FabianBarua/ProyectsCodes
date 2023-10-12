@@ -5,9 +5,10 @@ const bodyParser = require('body-parser');
 const db = require('./config/db');
 const helpers = require('./helpers');
 
+require('./models/codeslanguages')
 require('./models/codes')
 require('./models/languages')
-require('./models/codeslanguages')
+
 
 
 

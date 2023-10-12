@@ -5,7 +5,7 @@ const Language = require('./languages')
 
 
 
-const codes_languages = db.define('CODES_LANGUAGES', {
+const Codes_languages = db.define('CODES_LANGUAGES', {
     ID_CODELANGUAGE : {
         type: Sequelize.INTEGER,
         primaryKey: true,
@@ -20,12 +20,12 @@ const codes_languages = db.define('CODES_LANGUAGES', {
     }
 });
 
-codes_languages.belongsTo(Codes, { foreignKey: 'CODE_ID' });
-Codes.hasMany(codes_languages, { foreignKey: 'CODE_ID' }); 
+Codes_languages.belongsTo(Codes, { foreignKey: 'CODE_ID' });
+Codes.hasMany(Codes_languages, { foreignKey: 'CODE_ID' }); 
 
-codes_languages.belongsTo(Language, { foreignKey: 'LANGUAGE_ID' });
-Language.hasMany(codes_languages, { foreignKey: 'LANGUAGE_ID' }); 
+Codes_languages.belongsTo(Language, { foreignKey: 'LANGUAGE_ID' });
+Language.hasMany(Codes_languages, { foreignKey: 'LANGUAGE_ID' }); 
 
 
 
-module.exports = codes_languages;
+module.exports = Codes_languages;

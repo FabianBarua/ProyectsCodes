@@ -2,7 +2,7 @@ const Sequelize  = require('sequelize')
 const db = require('../config/db')
 
 
-const language  = db.define('LANGUAGES', {
+const Language  = db.define('LANGUAGES', {
     LANGUAGE_ID : {
         type: Sequelize.INTEGER,
         primaryKey: true,
@@ -13,4 +13,4 @@ const language  = db.define('LANGUAGES', {
 }
 );
 
-module.exports = language;
+module.exports = Language;

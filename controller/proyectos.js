@@ -3,19 +3,21 @@ const Codes = require('../models/codes')
 const Languages = require('../models/languages');
 const CodesLanguages = require('../models/codeslanguages');
 
-
-exports.home = (req, res) =>{
-        res.render('home', {
-        pageName : 'Home'
-        });
-}
-
 exports.codes = async(req, res) =>{
+        const codes = await Codes.findAll({ 
+                include: [{
+                  model: CodesLanguages,
+                  attributes: ['ID_CODELANGUAGE'],
+                  include: {
+                    model: Languages,
+                    attributes: ['LANGUAGE_TITLE', 'LANGUAGE_PATH'],
+                  },
+                }]
+        });
 
-        const codes  = await Codes.findAll({ limit: 20 });
 
-        console.log(codes)
-
+        console.log(JSON.stringify(codes, null, 2))
+        
         res.render('codes', {
         pageName : 'Codes',
         codes: codes
@@ -23,9 +25,16 @@ exports.codes = async(req, res) =>{
 
 }
 
+exports.home = (req, res) =>{
+        res.render('home', {
+        pageName : 'Home'
+        });
+}
 
 exports.code =  async (req, res) => {
-        const code  = await Codes.findOne({where:{id:req.params.id}})
+
+        const code  = await Codes.findOne({where:{CODE_ID:req.params.id}})
+        
         res.render('code', {
             pageName: 'Watch',
             code:code

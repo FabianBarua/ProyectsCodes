@@ -9,22 +9,23 @@ block contenido
             button(class="w-16  min-w-[4rem] sm:ml-4 flex items-center justify-center translate")
                 img(src="/img/SVG/lupa.svg", alt="" class=" h-8")
 
-    pre.text-xs #{vardump(results)} 
+
+
 
     ul#res(class="max-w-[50ch] mx-auto flex-col mt-5")
         
         each item in codes
+
             li(class="flex items-center")
                 div(class="flex flex-col flex-1 gap-5")
                     a(href=`c/${item.CODE_ID}` class="font1 text-[var(--pink)] text-xl overflow-hidden whitespace-nowrap overflow-ellipsis")
                         | #{item.CODE_TITLE}
-                    if item.language
-                        div#tech(class="flex gap-3")
-                            - var languages = item.language.split("-")
-                            each language, index in languages
+                    if item.CODES_LANGUAGEs.length > 0
+                        div#tech(class="flex gap-3 overflow-hidden")
+                            each language in item.CODES_LANGUAGEs
                                 div(class="bg-[#f9f4da]/5 flex gap-2 px-2 rounded-lg items-center")
-                                    img(src=`/img/SVG/${language.toLowerCase()}.svg`, alt="", class="w-[25px]")
-                                    p(class="text-[#f9f4da]/50 text-lg") #{language}
+                                    img(src=language.LANGUAGE_PATH || "/img/SVG/python.svg", alt="", class="w-[25px]")
+                                    p(class="text-[#f9f4da]/50 text-lg")=language.LANGUAGE.LANGUAGE_TITLE
 
                 div(class="w-8 h-8 button translate  ")
                     a(href="#")
