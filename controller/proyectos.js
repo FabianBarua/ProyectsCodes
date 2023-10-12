@@ -14,10 +14,6 @@ exports.codes = async(req, res) =>{
                   },
                 }]
         });
-
-
-        console.log(JSON.stringify(codes, null, 2))
-        
         res.render('codes', {
         pageName : 'Codes',
         codes: codes
@@ -33,8 +29,22 @@ exports.home = (req, res) =>{
 
 exports.code =  async (req, res) => {
 
-        const code  = await Codes.findOne({where:{CODE_ID:req.params.id}})
+        const code  = await Codes.findOne({
+                include:
+                [{
+                model: CodesLanguages,
+                attributes: ['ID_CODELANGUAGE'],
+                include: {
+                  model: Languages,
+                  attributes: ['LANGUAGE_TITLE', 'LANGUAGE_PATH'],
+                },
+                }],
+                where:
+                {CODE_ID:req.params.id}
+        })
         
+
+
         res.render('code', {
             pageName: 'Watch',
             code:code
